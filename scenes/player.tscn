@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c1y5pku52vebe"]
+
+[ext_resource type="Texture2D" uid="uid://2d2h32gaogyk" path="res://assets/cart-spritesheet.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bn66r6fkcgs2d" path="res://scripts/player.gd" id="1_g2els"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
+atlas = ExtResource("1_4flbx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
+atlas = ExtResource("1_4flbx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onrkg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3pqv")
+}],
+"loop": true,
+"name": &"rolling",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
+size = Vector2(16, 12.25)
+
+[node name="Player" type="CharacterBody2D" unique_id=364403916]
+script = ExtResource("1_g2els")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1268186321]
+position = Vector2(0, -7)
+sprite_frames = SubResource("SpriteFrames_hqtel")
+animation = &"rolling"
+frame_progress = 0.28352067
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1557141155]
+position = Vector2(1, -6.125)
+shape = SubResource("RectangleShape2D_sweqy")
