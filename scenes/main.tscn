@@ -31,7 +31,7 @@ sources/0 = SubResource("TileSetAtlasSource_sugp2")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1469931002]
 repeat_size = Vector2(512, 0)
-autoscroll = Vector2(-300, 0)
+autoscroll = Vector2(-100, 0)
 repeat_times = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=536822848]

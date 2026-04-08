@@ -1,11 +1,14 @@
 extends CharacterBody2D
 
 
-const SPEED = 130.0
+const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 
 
 func _physics_process(delta: float) -> void:
+	# Start rolling animation.
+	$AnimatedSprite2D.play("rolling")
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -16,17 +19,15 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
+	'''var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		# need to change later
+		# FIXME: keep velocity 
+		velocity.x = direction * (velocity.x + SPEED - 85)
+	else:'''
 	
-	# switch to rolling animation
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	if input_dir != Vector2.ZERO:
-		$AnimatedSprite2D.play("rolling")
-	else:
-		$AnimatedSprite2D.stop()
+	# Set player's velocity to be constant.
+	
+	velocity.x = SPEED
 	
 	move_and_slide()
