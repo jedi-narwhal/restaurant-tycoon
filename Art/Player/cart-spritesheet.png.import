@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gwrnfyqvhfgq"
-path="res://.godot/imported/obstacle-decor-spritesheet.png-edf0e2371f3af3eb8878f10968467a92.ctex"
+uid="uid://2d2h32gaogyk"
+path="res://.godot/imported/cart-spritesheet.png-15647210652bead27bb4e71092f4cf1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tileset/obstacle-decor-spritesheet.png"
-dest_files=["res://.godot/imported/obstacle-decor-spritesheet.png-edf0e2371f3af3eb8878f10968467a92.ctex"]
+source_file="res://Art/Player/cart-spritesheet.png"
+dest_files=["res://.godot/imported/cart-spritesheet.png-15647210652bead27bb4e71092f4cf1d.ctex"]
 
 [params]
 

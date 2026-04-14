@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1y5pku52vebe"]
 
-[ext_resource type="Texture2D" uid="uid://2d2h32gaogyk" path="res://assets/cart-spritesheet.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://bn66r6fkcgs2d" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://2d2h32gaogyk" path="res://Art/Player/cart-spritesheet.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bn66r6fkcgs2d" path="res://Scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -40,3 +40,10 @@ frame_progress = 0.28352067
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1557141155]
 position = Vector2(1, -6)
 shape = SubResource("RectangleShape2D_sweqy")
+
+[node name="UpRayCast" type="RayCast2D" parent="." unique_id=488918619]
+target_position = Vector2(0, -100)
+
+[node name="DownRayCast" type="RayCast2D" parent="." unique_id=600352019]
+position = Vector2(0, 10)
+target_position = Vector2(0, 100)

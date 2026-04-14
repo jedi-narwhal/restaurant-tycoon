@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0r4duc5tqs7s"
-path="res://.godot/imported/straight-track.png-97eaf4913cc3ad8179357f40df753945.ctex"
+uid="uid://cofddo6cl2pc8"
+path="res://.godot/imported/background-cloud3.png-cdf3d9278e2492b7a749b41756112a9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tileset/straight-track.png"
-dest_files=["res://.godot/imported/straight-track.png-97eaf4913cc3ad8179357f40df753945.ctex"]
+source_file="res://Art/Background/background-cloud3.png"
+dest_files=["res://.godot/imported/background-cloud3.png-cdf3d9278e2492b7a749b41756112a9b.ctex"]
 
 [params]
 
