@@ -38,12 +38,21 @@ animation = &"rolling"
 frame_progress = 0.28352067
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1557141155]
-position = Vector2(1, -6)
+position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_sweqy")
 
-[node name="UpRayCast" type="RayCast2D" parent="." unique_id=488918619]
+[node name="UpRayCastL" type="RayCast2D" parent="." unique_id=488918619]
+position = Vector2(-7, 0)
 target_position = Vector2(0, -100)
 
-[node name="DownRayCast" type="RayCast2D" parent="." unique_id=600352019]
-position = Vector2(0, 10)
+[node name="UpRayCastR" type="RayCast2D" parent="." unique_id=734661616]
+position = Vector2(7, 0)
+target_position = Vector2(0, -100)
+
+[node name="DownRayCastL" type="RayCast2D" parent="." unique_id=600352019]
+position = Vector2(-7, 10)
+target_position = Vector2(0, 100)
+
+[node name="DownRayCastR" type="RayCast2D" parent="." unique_id=1114820203]
+position = Vector2(7, 10)
 target_position = Vector2(0, 100)
