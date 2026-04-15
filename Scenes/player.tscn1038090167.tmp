@@ -26,12 +26,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
-size = Vector2(16, 16)
+size = Vector2(16, 12)
 
 [node name="Player" type="CharacterBody2D" unique_id=364403916]
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1268186321]
+position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_hqtel")
 animation = &"rolling"
 frame_progress = 0.28352067
@@ -39,11 +40,18 @@ frame_progress = 0.28352067
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1557141155]
 shape = SubResource("RectangleShape2D_sweqy")
 
-[node name="UpRayCast" type="RayCast2D" parent="." unique_id=488918619]
-position = Vector2(7, -5)
-target_position = Vector2(0, -50)
-collision_mask = 2
+[node name="UpRayCastL" type="RayCast2D" parent="." unique_id=488918619]
+position = Vector2(-7, 0)
+target_position = Vector2(0, -100)
 
-[node name="DownRayCast" type="RayCast2D" parent="." unique_id=600352019]
-position = Vector2(7, 12)
-collision_mask = 2
+[node name="UpRayCastR" type="RayCast2D" parent="." unique_id=734661616]
+position = Vector2(7, 0)
+target_position = Vector2(0, -100)
+
+[node name="DownRayCastL" type="RayCast2D" parent="." unique_id=600352019]
+position = Vector2(-7, 10)
+target_position = Vector2(0, 100)
+
+[node name="DownRayCastR" type="RayCast2D" parent="." unique_id=1114820203]
+position = Vector2(7, 10)
+target_position = Vector2(0, 100)
